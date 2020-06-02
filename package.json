@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "A range overlap detection tool for graphical representation",
   "main": "index.js",
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -25,5 +30,10 @@
   "homepage": "https://github.com/ntocampos/groverlap#readme",
   "devDependencies": {
     "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "prettier": "^2.0.5",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0"
   }
 }
