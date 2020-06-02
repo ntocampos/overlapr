@@ -4,7 +4,8 @@
   "description": "A range overlap detection tool for graphical representation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/ntocampos/groverlap/issues"
   },
-  "homepage": "https://github.com/ntocampos/groverlap#readme"
+  "homepage": "https://github.com/ntocampos/groverlap#readme",
+  "devDependencies": {
+    "typescript": "^3.9.3"
+  }
 }
