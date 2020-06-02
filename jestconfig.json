@@ -1,8 +1,10 @@
 {
+  "rootDir": "./",
   "transform": {
     "^.+\\.(t|j)sx?$": "ts-jest"
   },
-  "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+  "notify": true,
+  "testRegex": "(/specs/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
   "moduleFileExtensions": [
     "ts",
     "tsx",
@@ -10,5 +12,10 @@
     "jsx",
     "json",
     "node"
-  ]
+  ],
+  "moduleNameMapper": {
+    "@/(.*)": [
+      "<rootDir>/src/$1"
+    ]
+  }
 }
