@@ -1,10 +1,10 @@
-name: Lint
+name: Prettier
 
 on: push
 
 jobs:
-  run-linters:
-    name: Run linters
+  run-prettier:
+    name: Run Prettier
     runs-on: ubuntu-latest
 
     steps:
@@ -16,13 +16,12 @@ jobs:
         with:
           node-version: 12
 
-      # ESLint and Prettier must be in `package.json`
       - name: Install Node.js dependencies
         run: yarn install
 
-      - name: Run linters
+      - name: Run Prettier
         uses: samuelmeuli/lint-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          tslint: true
           prettier: true
+          prettier_extensions: js,ts
