@@ -1,6 +1,6 @@
-import subject from '../../src/helpers/areRangesOverlapping'
+import subject from '../../src/helpers/hasOverlap'
 
-describe('areRangesOverlapping()', () => {
+describe('hasOverlap()', () => {
   test('validates ranges', () => {
     expect(() => subject([1, 5], [10, 6])).toThrow(RangeError)
     expect(() => subject([5, 1], [10, 20])).toThrow(RangeError)
