@@ -2,26 +2,17 @@ name: Codecov
 on: [push]
 jobs:
   run:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-    env:
-      OS: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-
     - name: Setup Node
       uses: actions/setup-node@v1
       with:
         node-version: 12
-
     - name: Install dependencies
       run: yarn install
-
     - name: Generate coverage report
       run: yarn test --coverage
-
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
       with:
