@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 12
 
-      - name: Install Node.js dependencies
+      - name: Install dependencies
         run: yarn install
 
       - name: Run Prettier
