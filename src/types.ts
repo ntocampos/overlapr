@@ -6,14 +6,8 @@ export type Config = {
   getEnd: (item: any) => number
 }
 
-export type Input = {
-  id?: string
-  start?: number
-  end?: number
-}
-
 export type OverlapItem = {
-  _original: Input
+  _original: object
   id: string
   start: number
   end: number
@@ -24,7 +18,11 @@ export type OverlapItem = {
   context?: number
 }
 
+export type OverlapDataObj = {
+  [key: number]: OverlapItem
+}
+
 export type OverlapData = {
   [key: number]: OverlapItem
-  _ordered?: OverlapItem[]
+  _ordered: OverlapItem[]
 }
