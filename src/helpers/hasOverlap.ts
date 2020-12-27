@@ -1,6 +1,9 @@
-type Range = [number, number]
+import type { SimpleRange } from '@/types'
 
-const hasOverlap = ([start1, end1]: Range, [start2, end2]: Range) => {
+const hasOverlap = (
+  [start1, end1]: SimpleRange,
+  [start2, end2]: SimpleRange
+) => {
   if (!(start1 <= end1 && start2 <= end2)) {
     throw new RangeError('Interval ends must be before its start')
   }
