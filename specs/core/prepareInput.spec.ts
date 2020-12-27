@@ -1,4 +1,4 @@
-import prepareInput from '../../src/core/prepareInput'
+import prepareInput from '@/core/prepareInput'
 
 const expectedObj = {
   id0: { id: 'id0', start: 1, end: 2 },
