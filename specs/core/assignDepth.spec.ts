@@ -4,10 +4,16 @@ import assignDepth from '../../src/core/assignDepth'
 describe('assignDepth', () => {
   let items
 
-  /*
-      -----  -----  -----
-     |  a  ||  b  ||  c  |
-      -----  -----  -----
+  /* Scenario 1: non-overlapping ranges
+      -----
+     |  a  |
+      -----
+      -----
+     |  b  |
+      -----
+      -----
+     |  c  |
+      -----
   */
   describe('non-overlapping ranges', () => {
     beforeEach(
@@ -28,17 +34,10 @@ describe('assignDepth', () => {
     })
   })
 
-  /*
-    Scenario 2: two independent events being overlapped by a third
-      -----
-     |  a  |
-      -----
-      -----
-     |  b  |
-      -----
-      -----
-     |  c  |
-      -----
+  /* Scenario 2: all ranges overlapping
+      -----  -----  -----
+     |  a  ||  b  ||  c  |
+      -----  -----  -----
   */
   describe('all ranges overlapping', () => {
     beforeEach(
@@ -59,8 +58,7 @@ describe('assignDepth', () => {
     })
   })
 
-  /*
-    Scenario 3: two independent events being overlapped by a third
+  /* Scenario 3: two independent ranges overlapped by a third
       -----
      |  a  | -----
       ----- |  c  |
