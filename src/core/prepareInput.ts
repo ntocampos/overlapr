@@ -1,5 +1,5 @@
-import { getConfig } from '@/config'
-import type { OverlapDataObj, OverlapData } from '@/types'
+import { getConfig } from '../config'
+import type { OverlapDataObj, OverlapData } from '../types'
 
 const prepareInput = (
   inputs: object[],

@@ -1,4 +1,4 @@
-import type { SimpleRange } from '@/types'
+import type { SimpleRange } from '../types'
 
 const hasOverlap = (
   [start1, end1]: SimpleRange,

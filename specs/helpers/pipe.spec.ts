@@ -1,4 +1,4 @@
-import pipe from '@/helpers/pipe'
+import pipe from '../../src/helpers/pipe'
 
 describe('pipe()', () => {
   test('returns a function', () => expect(pipe()).toBeInstanceOf(Function))
