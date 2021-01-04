@@ -1,5 +1,5 @@
-import prepareInput from '@/core/prepareInput'
-import assignDepth from '@/core/assignDepth'
+import prepareInput from '../../src/core/prepareInput'
+import assignDepth from '../../src/core/assignDepth'
 
 describe('assignDepth', () => {
   let items

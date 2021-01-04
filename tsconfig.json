@@ -6,11 +6,8 @@
     "outDir": "./lib",
     "strict": true,
     "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    },
     "noImplicitAny": false
   },
-  "include": ["src", "specs"],
+  "include": ["src"],
   "exclude": ["node_modules"]
 }

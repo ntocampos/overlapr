@@ -1,4 +1,4 @@
-import type { Config } from '@/types'
+import type { Config } from './types'
 
 export const defaultConfig: Config = {
   getId: ({ id }) => id,

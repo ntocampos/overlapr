@@ -1,4 +1,4 @@
-import subject from '@/helpers/hasOverlap'
+import subject from '../../src/helpers/hasOverlap'
 
 describe('hasOverlap()', () => {
   test('validates ranges', () => {

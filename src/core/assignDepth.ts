@@ -1,5 +1,5 @@
-import hasOverlap from '@/helpers/hasOverlap'
-import type { OverlapItem, OverlapData } from '@/types'
+import hasOverlap from '../helpers/hasOverlap'
+import type { OverlapItem, OverlapData } from '../types'
 
 const assignDepth = (data: OverlapData) => {
   const items = data._ordered
