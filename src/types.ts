@@ -14,7 +14,7 @@ export type OverlapItem = {
   depth?: number
   width?: number
   height?: number
-  overlaps?: string[]
+  conflicts?: string[]
   context?: number
 }
 
