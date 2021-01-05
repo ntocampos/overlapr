@@ -17,6 +17,7 @@ const assignDepth = (data: OverlapData) => {
       if (!hasConflict) {
         item.depth = index
         group.push(item)
+        break
       }
     }
 
