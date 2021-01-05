@@ -84,4 +84,36 @@ describe('assignDepth', () => {
       expect(results['c'].depth).toEqual(1)
     })
   })
+
+  /* Scenario 4: two independent clusters
+      -----
+     |  a  | -----
+      ----- |  c  |
+      ----- |     |
+     |  b  | -----
+      -----
+      -----
+     |  d  |
+      -----
+  */
+  describe('two independent clusters', () => {
+    beforeEach(
+      () =>
+        (items = prepareInput([
+          { id: 'a', start: 0, end: 5 },
+          { id: 'b', start: 5, end: 10 },
+          { id: 'c', start: 3, end: 8 },
+          { id: 'd', start: 10, end: 15 },
+        ]))
+    )
+
+    test('assigns context correctly', () => {
+      const results = assignDepth(items)
+
+      expect(results['a'].depth).toEqual(0)
+      expect(results['b'].depth).toEqual(0)
+      expect(results['c'].depth).toEqual(1)
+      expect(results['d'].depth).toEqual(0)
+    })
+  })
 })
