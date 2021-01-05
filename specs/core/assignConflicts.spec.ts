@@ -84,4 +84,36 @@ describe('assignConflicts', () => {
       expect(results['c'].conflicts).toEqual(expect.arrayContaining(['a', 'b']))
     })
   })
+
+  /* Scenario 4: two independent clusters
+      -----
+     |  a  | -----
+      ----- |  c  |
+      ----- |     |
+     |  b  | -----
+      -----
+      -----
+     |  d  |
+      -----
+  */
+  describe('two independent clusters', () => {
+    beforeEach(
+      () =>
+        (items = prepareInput([
+          { id: 'a', start: 0, end: 5 },
+          { id: 'b', start: 5, end: 10 },
+          { id: 'c', start: 3, end: 8 },
+          { id: 'd', start: 10, end: 15 },
+        ]))
+    )
+
+    test('assigns context correctly', () => {
+      const results = assignConflicts(items)
+
+      expect(results['a'].conflicts).toEqual(expect.arrayContaining(['c']))
+      expect(results['b'].conflicts).toEqual(expect.arrayContaining(['c']))
+      expect(results['c'].conflicts).toEqual(expect.arrayContaining(['a', 'b']))
+      expect(results['d'].conflicts).toEqual([])
+    })
+  })
 })
