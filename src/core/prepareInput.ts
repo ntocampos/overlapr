@@ -1,5 +1,5 @@
 import { getConfig } from '../config'
-import type { OverlapDataObj, OverlapData } from '../types'
+import type { OverlapData } from '../types'
 
 const prepareInput = (
   inputs: object[],
@@ -7,21 +7,18 @@ const prepareInput = (
 ): OverlapData => {
   const config = getConfig(userConfig)
 
-  const items: OverlapDataObj = inputs.reduce(
-    (acc: OverlapDataObj, item: object) => {
-      const id = config.getId(item)
+  const items = inputs.reduce((acc: object, item: object) => {
+    const id = config.getId(item)
 
-      acc[id] = {
-        _original: item,
-        id: config.getId(item),
-        start: config.getStart(item),
-        end: config.getEnd(item),
-      }
+    acc[id] = {
+      _original: item,
+      id: config.getId(item),
+      start: config.getStart(item),
+      end: config.getEnd(item),
+    }
 
-      return acc
-    },
-    {}
-  )
+    return acc
+  }, {})
 
   return {
     ...items,
