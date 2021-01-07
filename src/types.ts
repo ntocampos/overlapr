@@ -11,15 +11,12 @@ export type OverlapItem = {
   id: string
   start: number
   end: number
-  depth?: number
-  width?: number
-  height?: number
-  conflicts?: string[]
-  context?: number
-}
-
-export type OverlapDataObj = {
-  [key: number]: OverlapItem
+  depth: number
+  conflicts: string[]
+  context: number
+  offset: number
+  width: number
+  height: number
 }
 
 export type OverlapData = {
