@@ -9,9 +9,12 @@ import {
 } from './core'
 import prepareInput from './core/prepareInput'
 
-import { Config } from './types'
+import { Config, OverlapItem } from './types'
 
-export const processData = (userInput: object[], config?: Config | object) => {
+export const processData = (
+  userInput: object[],
+  config?: Config | object
+): Record<string, OverlapItem> => {
   const data = prepareInput(userInput, config)
 
   return pipe(
