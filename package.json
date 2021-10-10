@@ -2,10 +2,10 @@
   "name": "groverlap",
   "version": "1.0.0",
   "description": "A range overlap detection tool for graphical representation",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
   "files": [
-    "lib/**/*"
+    "dist/lib/**/*"
   ],
   "scripts": {
     "test": "jest --config jestconfig.json",
