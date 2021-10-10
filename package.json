@@ -10,7 +10,7 @@
   "scripts": {
     "test": "jest --config jestconfig.json",
     "test:dev": "jest --config jestconfig.json --watch --verbose true",
-    "debug": "tsc --sourcemap",
+    "debug": "tsc && node --inspect-brk dist/lib/index.js",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
