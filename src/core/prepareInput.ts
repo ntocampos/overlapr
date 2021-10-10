@@ -3,7 +3,7 @@ import type { OverlapData, Config } from '../types'
 
 const prepareInput = (
   inputs: object[],
-  userConfig: object = {}
+  userConfig: Config | object = {}
 ): OverlapData => {
   const config = getConfig(userConfig)
 
