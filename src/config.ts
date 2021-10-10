@@ -6,10 +6,8 @@ export const defaultConfig: Config = {
   getEnd: ({ end }) => end,
 }
 
-export const getConfig = (config: any) => {
-  return {
-    getId: config.getId || defaultConfig.getId,
-    getStart: config.getStart || defaultConfig.getStart,
-    getEnd: config.getEnd || defaultConfig.getEnd,
-  }
-}
+export const getConfig = (config: any): Config => ({
+  getId: config.getId || defaultConfig.getId,
+  getStart: config.getStart || defaultConfig.getStart,
+  getEnd: config.getEnd || defaultConfig.getEnd,
+})
