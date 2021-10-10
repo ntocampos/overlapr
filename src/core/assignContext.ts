@@ -1,4 +1,4 @@
-import { OverlapData, OverlapItem } from 'src/types'
+import { OverlapData, OverlapItem } from '../types'
 
 const findCluster = (data: OverlapData, item: OverlapItem) => {
   let cluster = new Set([item.id])
