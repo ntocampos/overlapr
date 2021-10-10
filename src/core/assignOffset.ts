@@ -1,4 +1,4 @@
-import { OverlapData } from 'src/types'
+import { OverlapData } from '../types'
 
 const assignOffset = (data: OverlapData) => {
   const items = data._ordered
