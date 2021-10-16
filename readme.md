@@ -1,3 +1,3 @@
-[![codecov](https://codecov.io/gh/ntocampos/groverlap/branch/master/graph/badge.svg?token=7E20X319DY)](https://codecov.io/gh/ntocampos/groverlap)
+[![codecov](https://codecov.io/gh/ntocampos/overlapr/branch/master/graph/badge.svg?token=7E20X319DY)](https://codecov.io/gh/ntocampos/overlapr)
 
-# groverlap: a range overlap detection tool for graphical representation.
+# overlapr: a range overlap detection tool for graphical representation.

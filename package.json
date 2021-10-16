@@ -1,5 +1,5 @@
 {
-  "name": "groverlap",
+  "name": "overlapr",
   "version": "1.0.0",
   "description": "A range overlap detection tool for graphical representation",
   "main": "dist/lib/index.js",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ntocampos/groverlap.git"
+    "url": "git+https://github.com/ntocampos/overlapr.git"
   },
   "keywords": [
     "range",
@@ -33,9 +33,9 @@
   "author": "Moisés Neto",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ntocampos/groverlap/issues"
+    "url": "https://github.com/ntocampos/overlapr/issues"
   },
-  "homepage": "https://github.com/ntocampos/groverlap#readme",
+  "homepage": "https://github.com/ntocampos/overlapr#readme",
   "devDependencies": {
     "@types/jest": "^25.2.3",
     "jest": "^26.0.1",
