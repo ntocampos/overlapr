@@ -1,5 +1,3 @@
-[![codecov](https://codecov.io/gh/ntocampos/overlapr/branch/master/graph/badge.svg?token=7E20X319DY)](https://codecov.io/gh/ntocampos/overlapr)
-
 # Overlapr
 
 Overlapr is a conflict detection tool that will help you represent them graphically on your UI, regardless of the application.
@@ -35,9 +33,9 @@ The main function expects an array of objects to be analyzed as its first parame
 
 ```tsx
 type InputObject = {
-	id?: string,
-	start?: number,
-	end?: number,
+  id?: string,
+  start?: number,
+  end?: number,
 }[]
 ```
 
@@ -47,9 +45,9 @@ As we can see, all attributes are optional because your objects might not have t
 
 ```tsx
 type Config = {
-	getId?: (InputObject) => string,
-	getStart?: (InputObject) => number,
-	getEnd?: (InputObject) => number,
+  getId?: (InputObject) => string,
+  getStart?: (InputObject) => number,
+  getEnd?: (InputObject) => number,
 }
 ```
 
@@ -63,7 +61,7 @@ After running Overlapr on your entity collection, you'll get a hash object as th
 
 ```tsx
 type OverlapItem = {
-	_original: InputObject
+  _original: InputObject
   id: string
   start: number
   end: number
@@ -76,8 +74,8 @@ type OverlapItem = {
 }
 
 type Output = {
-	_ordered: OverlapItem[],
-	[id: string]: OverlapItem,
+  _ordered: OverlapItem[],
+  [id: string]: OverlapItem,
 }
 ```
 
