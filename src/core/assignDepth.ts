@@ -3,10 +3,10 @@ import type { OverlapItem, OverlapData } from '../types'
 
 const assignDepth = (data: OverlapData) => {
   const items = data._ordered
-  let groups: OverlapItem[][] = []
+  const groups: OverlapItem[][] = []
 
   items.forEach((item) => {
-    for (let [index, group] of groups.entries()) {
+    for (const [index, group] of groups.entries()) {
       const hasConflict = group.some((groupItem) => {
         return hasOverlap(
           [item.start, item.end],

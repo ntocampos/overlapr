@@ -1,9 +1,9 @@
 import { OverlapData, OverlapItem } from '../types'
 
 const findCluster = (data: OverlapData, item: OverlapItem) => {
-  let cluster = new Set([item.id])
+  const cluster = new Set([item.id])
 
-  for (let conflictId of cluster) {
+  for (const conflictId of cluster) {
     data[conflictId].conflicts.forEach(cluster.add, cluster)
   }
 
