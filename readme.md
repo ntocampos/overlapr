@@ -92,7 +92,7 @@ Here's an explanation of each one of those attributes. For detailed information 
 - `width`: the length of this entry relative to the cross-axis.
 - `height`: the length of this entry relative to the main axis. This is calculated simply as `end - start`.
 
-## Demo
+## Demo (WIP)
 
 [https://codesandbox.io/p/sandbox/overlapr-demo-cus9ft?file=/src/App.tsx:9,1](https://codesandbox.io/p/sandbox/overlapr-demo-cus9ft?file=/src/App.tsx:9,1)
 
