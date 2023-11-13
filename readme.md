@@ -25,6 +25,11 @@ const data = overlapr.processData(rawData)
 const {start, end, width, height, offset} = data['some-id']
 ```
 
+## Demo
+
+[https://codesandbox.io/p/github/ntocampos/overlapr-demo/main](https://codesandbox.io/p/github/ntocampos/overlapr-demo/main)
+<img width="545" alt="image" src="https://github.com/ntocampos/overlapr/assets/6672835/c19f9cc1-b514-4b0d-9487-62b42d280405">
+
 ### API
 
 **Input**
@@ -91,10 +96,6 @@ Here's an explanation of each one of those attributes. For detailed information 
 - `offset`: this is the entry's offset relative to the cross-axis. Where it should start.
 - `width`: the length of this entry relative to the cross-axis.
 - `height`: the length of this entry relative to the main axis. This is calculated simply as `end - start`.
-
-## Demo (WIP)
-
-[https://codesandbox.io/p/sandbox/overlapr-demo-cus9ft?file=/src/App.tsx:9,1](https://codesandbox.io/p/sandbox/overlapr-demo-cus9ft?file=/src/App.tsx:9,1)
 
 ## Contributing
 
